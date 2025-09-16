@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>1st BOMBOCLAT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <button class="btn current" onclick="showSection('mot', this)"> 💌 Petit mot</button>
+    <button class="btn" onclick="showSection('photos', this)"> 📸 Tsawerna </button>
+    <button class="btn" onclick="showSection('musique', this)"> 🎶 Musique </button>
+  </div>
+
+  <!-- Section Mot -->
+  <div id="mot" class="section active">
+    <h1>
+      <div class="line line1">Joyeux période d'essai zainoubti !</div>
+      <div class="line line2">Je te Rawrr</div>
+      <div class="line line3">(Lezem ne5thou l'abonnement taw 😆)</div>
+    </h1>
+  </div>
+
+  <!-- Section Photos -->
+  <div id="photos" class="section">
+    <h1>Haja Waw </h1>
+    <div class="photos">
+      <img src="C:\Users\LENOVO\Documents\Projects\Nouveau dossier (2)\Photo 3.jpg" alt="Photo 1">
+      <img src="C:\Users\LENOVO\Documents\Projects\Nouveau dossier (2)\Photo 2.jpg" alt="Photo 2">
+      <img src="C:\Users\LENOVO\Documents\Projects\Nouveau dossier (2)\Photo 1.jpg" alt="Photo 3">
+      <img src="C:\Users\LENOVO\Documents\Projects\Nouveau dossier (2)\Photo 4.jpg" alt="Photo 4">
+      <img src="C:\Users\LENOVO\Documents\Projects\Nouveau dossier (2)\Photo 5.jpg" alt="Photo 5">
+    </div>
+  </div>
+
+  <!-- Section Musique -->
+  <div id="musique" class="section">
+    <h1> Ghneytek 3add </h1>
+
+    <div class="music-player">
+      <!-- Pochette -->
+      <div class="cover">
+        <img src="C:\Users\LENOVO\Documents\Projects\Nouveau dossier (2)\image.png" alt="Album cover">
+      </div>
+
+      <!-- Infos -->
+      <div class="info">
+        <h2 id="songTitle">American Wedding </h2>
+        <p id="artistName">Frank Ocean</p>
+
+        <!-- Progression -->
+        <div class="progress-container">
+          <span id="currentTime">0:00</span>
+          <input type="range" id="progress" value="0" min="0" max="100">
+          <span id="duration">2:00</span>
+        </div>
+
+        <!-- Contrôles -->
+        <div class="controls">
+          <button id="prevBtn">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M6 12L20 4v16L6 12zM4 4h2v16H4V4z"/>
+            </svg>
+          </button>
+
+          <button id="playPauseBtn">
+            <svg id="playIcon" class="icon" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pauseIcon" class="icon" viewBox="0 0 24 24" style="display:none;">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+          </button>
+
+          <button id="nextBtn">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M4 4l14 8-14 8V4zm16 0h-2v16h2V4z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio">
+      <source src="musique.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
